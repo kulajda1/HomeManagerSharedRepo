@@ -4,13 +4,14 @@
 
 <html>
 <head runat="server">
-    <title></title>
+    <title>Home Manager | Login</title>
+    <link rel="stylesheet" href="style.css"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="login_container">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 Bejelentkezés<br />
             </asp:ContentPlaceHolder>

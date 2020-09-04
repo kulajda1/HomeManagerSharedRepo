@@ -1,2 +1,9 @@
 ﻿body {
+    margin: 0;
+    padding: 0;
+}
+.login_container {
+    background-color: rgba(0,0,0,0.5);
+    width: 100vw;
+    border: 2px solid red;
 }
