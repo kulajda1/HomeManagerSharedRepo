@@ -1,0 +1,34 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="SignUp.Master.cs" Inherits="HomeManager.View.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                Regisztráció<br />
+            </asp:ContentPlaceHolder>
+            Vezetéknév:<br />
+            <input id="Text1" type="text" /><br />
+            Keresztnév:<br />
+            <input id="Text2" type="text" /><br />
+            Felhasználónév:<br />
+            <input id="Text3" type="text" /><br />
+            Jelszó:<br />
+            <input id="Password1" type="password" /><br />
+            Jelszó ismét:<br />
+            <input id="Password2" type="password" /><br />
+            Születési dátum:<br />
+            <input id="Text4" type="text" /><br />
+            E-mail cím:<br />
+            <input id="Text5" type="text" /></div>
+    </form>
+
+</body>
+</html>

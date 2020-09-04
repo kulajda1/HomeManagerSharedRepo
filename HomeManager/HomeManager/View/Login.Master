@@ -12,19 +12,17 @@
     <form id="form1" runat="server">
         <div>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                Bejelentkezés<br />
             </asp:ContentPlaceHolder>
+            Felhasználónév:<br />
+            <input id="Text1" type="text" /><br />
+            Jelszó:<br />
+            <input id="Password1" type="password" /><br />
+            <asp:Button ID="Button1" runat="server" Text="Bejelentkezés" />
+            <br />
+            <asp:Button ID="Button2" runat="server" Text="Regisztráció" />
         </div>
     </form>
-    <div>
-        <form>
-            <div><label>Bejelentkezés</label></div>
-            <div><label>Felhasználónév:</label></div>
-            <div><input type="text"/></div>
-            <div><label>Jelszó:</label></div>
-            <div><input type="password"/></div>
-            <div><button>Bejelentkezés</button></div>
-            <div><button>Regisztráció</button></div>
-        </form>
-    </div>
+
 </body>
 </html>

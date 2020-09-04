@@ -87,6 +87,7 @@
     </Content>
     <Content Include="View\style.css" />
     <Content Include="View\WebForm1.aspx" />
+    <Content Include="View\WebForm2.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -133,12 +134,26 @@
     <Compile Include="View\Login.Master.designer.cs">
       <DependentUpon>Login.Master</DependentUpon>
     </Compile>
+    <Compile Include="View\SignUp.Master.cs">
+      <DependentUpon>SignUp.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\SignUp.Master.designer.cs">
+      <DependentUpon>SignUp.Master</DependentUpon>
+    </Compile>
     <Compile Include="View\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="View\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\WebForm2.aspx.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\WebForm2.aspx.designer.cs">
+      <DependentUpon>WebForm2.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
@@ -158,6 +173,7 @@
     </Content>
     <None Include="packages.config" />
     <Content Include="View\Login.Master" />
+    <Content Include="View\SignUp.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
