@@ -86,6 +86,7 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
     <Content Include="Web.config" />
+    <Content Include="WebForm1.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Area.cs">
@@ -106,10 +107,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Model\AreaModel.cs" />
-    <Compile Include="Model\ProductModel.cs" />
-    <Compile Include="Model\ProductTypeModel.cs" />
-    <Compile Include="Model\UserModel.cs" />
+    <Compile Include="Repos\AreaRepo.cs" />
+    <Compile Include="Repos\ProductRepo.cs" />
+    <Compile Include="Repos\ProductTypeRepo.cs" />
+    <Compile Include="Repos\UserRepo.cs" />
     <Compile Include="Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -122,6 +123,13 @@
     </Compile>
     <Compile Include="User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
