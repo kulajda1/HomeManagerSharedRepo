@@ -85,6 +85,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="View\Images\bg.jpg" />
     <Content Include="View\style.css" />
     <Content Include="View\WebForm1.aspx" />
     <Content Include="View\WebForm2.aspx" />

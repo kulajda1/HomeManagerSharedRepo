@@ -5,24 +5,29 @@
 <html>
 <head runat="server">
     <title>Home Manager | Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css"/>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <form id="form1" runat="server">
-        <div class="login_container">
+        <div class="content_container">
+            <div class="login_container">
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-                Bejelentkezés<br />
+               
             </asp:ContentPlaceHolder>
-            Felhasználónév:<br />
-            <input id="Text1" type="text" /><br />
-            Jelszó:<br />
-            <input id="Password1" type="password" /><br />
-            <asp:Button ID="Button1" runat="server" Text="Bejelentkezés" />
+            <div class="login_lbl_container"><label class="login_lbl">Bejelentkezés</label></div><br />
+            <label class="username_lbl">Felhasználónév:</label><br />
+            <input id="username_txt" type="text" /><br />
+            <label class="password_lbl">Jelszó:</label><br />
+            <input id="password_txt" type="password" /><br />
+            <asp:Button ID="login_btn" runat="server" Text="Bejelentkezés" />
             <br />
-            <asp:Button ID="Button2" runat="server" Text="Regisztráció" />
+            <asp:Button ID="signup_btn" runat="server" Text="Regisztráció" />
         </div>
+        </div>
+        
     </form>
 
 </body>
