@@ -14,6 +14,7 @@ namespace HomeManager.Model
                 HomeManagerEntities db = new HomeManagerEntities();
                 db.Area.Add(area);
                 db.SaveChanges();
+                Console.WriteLine("dsadasdsad");
 
                 return area.Name + " sikeresen felvéve a területek közé!";
             }
