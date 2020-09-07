@@ -16,8 +16,6 @@ namespace HomeManager.Model
                 db.SaveChanges();
                 Console.WriteLine("dsadasdsad");
 
-                Console.WriteLine("dsadasdsad");
-
                 return area.Name + " sikeresen felvéve a területek közé!";
             }
             catch (Exception e)
