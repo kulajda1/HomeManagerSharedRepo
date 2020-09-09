@@ -15,11 +15,14 @@
     <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="HomeManagerModel.User">
         <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
           <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="IsActive" ColumnName="IsActive" />
           <ScalarProperty Name="Username" ColumnName="Username" />
           <ScalarProperty Name="Password" ColumnName="Password" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="LoggedIn" ColumnName="LoggedIn" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -27,6 +30,7 @@
     <EntitySetMapping Name="Product">
       <EntityTypeMapping TypeName="HomeManagerModel.Product">
         <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
           <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
           <ScalarProperty Name="AreaID" ColumnName="AreaID" />
           <ScalarProperty Name="Image" ColumnName="Image" />
@@ -42,6 +46,7 @@
     <EntitySetMapping Name="ProductType">
       <EntityTypeMapping TypeName="HomeManagerModel.ProductType">
         <MappingFragment StoreEntitySet="ProductType">
+          <ScalarProperty Name="IsActive" ColumnName="IsActive" />
           <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>

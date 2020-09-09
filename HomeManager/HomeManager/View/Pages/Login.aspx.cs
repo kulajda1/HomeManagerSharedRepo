@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HomeManager.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -12,6 +13,20 @@ namespace HomeManager.View
         protected void Page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        protected void btn_register_Click(object sender, EventArgs e)
+        {
+            UserRepo model = new UserRepo();
+            User user = model.GetUserByUsername(txt_username.Text);
+            if (user.Password == txt_password.Text)
+            {
+                User newuser = new User();
+                newuser.LoggedIn = true;
+
+                model.UpdateUser(user.ID, newuser);
+                Response.Redirect(@"~/View/Pages/HomePage.aspx");
+            }
         }
     }
 }

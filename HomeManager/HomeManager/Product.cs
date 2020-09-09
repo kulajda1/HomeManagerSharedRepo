@@ -23,6 +23,7 @@ namespace HomeManager
         public string Image { get; set; }
         public int AreaID { get; set; }
         public int ProductTypeID { get; set; }
+        public Nullable<bool> IsActive { get; set; }
     
         public virtual ProductType ProductType { get; set; }
         public virtual Area Area { get; set; }

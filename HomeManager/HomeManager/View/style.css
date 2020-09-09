@@ -1,70 +1,114 @@
 ﻿body {
     margin: 0;
     padding: 0;
-    background-image: url("Images/bg.jpg");
+    background-image: url("../View/Images/1764.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
 }
-.content_container{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
+#loginpage {
+    margin-left: 53%;
+    margin-bottom: 10px;
+    margin-top: 15%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 25%;
 }
-.login_container {
-    background-color: rgba(0,0,0,0.5);
-    width: 300px;
-    height: 500px;
-    margin: auto;
+
+#registerpage {
+    margin-left: 53%;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    width: 25%;
 }
-#login_btn {
-    background-image: linear-gradient(90deg, #5EBDDA, #D45EDA );
-    border: none;
-    color: white;
-    height: 30px;
-    border-radius: 15px;
-    width: 200px;
-    font-size: 16px;
-    margin-left: 50px;
-    margin-top: 40px;
+
+#accountheader {
+    margin-left: 53%;
+    margin-top: 18%;
+    border-radius: 5px;
+    padding: 20px;
+    width: 25%;
+    text-align: center;
 }
-#signup_btn {
-    background-color: transparent;
-    border: 2px solid #5EBDDA;
-    color: white;
-    height: 30px;
-    border-radius: 15px;
-    width: 200px;
-    font-size: 16px;
-    margin-top: 10px;
-    margin-left: 50px;
+
+#registerheader {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#username_txt, #password_txt{
-    margin-top: 10px;
-    margin-left: 25px;
-    width: 250px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid white;
+
+#loginheader {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-.login_lbl{
-    margin-top: 30px;
+
+#registerbutton {
+    text-align: center;
+}
+
+.linkbutton {
     margin-bottom: 50px;
-    color: white;
-    font-size: 16px;
+    font-family: cursive;
+    color: Highlight;
+    font-size: 12px;
+    text-align: center;
 }
-.password_lbl, .username_lbl {
-    margin-top: 10px;
-    margin-bottom: 30px;
-    margin-left: 25px;
-    color: white;
-    font-size: 16px;
+
+.registerErrorMessages {
+    margin-bottom:50px;
+    font-family: cursive;
+    color: crimson;
+    font-size: 12px;
 }
- .login_lbl_container {
-        display: flex;
-        justify-content: center;
- }
+
+.button {
+    background-color: orangered;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.button2:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=password], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}

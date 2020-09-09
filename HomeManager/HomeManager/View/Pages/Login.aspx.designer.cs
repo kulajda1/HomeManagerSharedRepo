@@ -15,13 +15,13 @@ namespace HomeManager.View
     {
 
         /// <summary>
-        /// lbl_login control.
+        /// lbl_register control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl_login;
+        protected global::System.Web.UI.WebControls.Label lbl_register;
 
         /// <summary>
         /// lbl_username control.
@@ -60,6 +60,15 @@ namespace HomeManager.View
         protected global::System.Web.UI.WebControls.TextBox txt_password;
 
         /// <summary>
+        /// lbl_login_errortext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_login_errortext;
+
+        /// <summary>
         /// btn_login control.
         /// </summary>
         /// <remarks>
@@ -67,5 +76,14 @@ namespace HomeManager.View
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btn_login;
+
+        /// <summary>
+        /// btn_forgottenpassword control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink btn_forgottenpassword;
     }
 }

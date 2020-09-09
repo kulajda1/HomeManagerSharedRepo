@@ -32,10 +32,39 @@ namespace HomeManager.Model
             {
                 HomeManagerEntities db = new HomeManagerEntities();
                 User user = db.User.Find(id);
-                user.Name = newuser.Name;
-                user.IsActive = newuser.IsActive;
-                user.Password = newuser.Password;
-                user.Username = newuser.Username;
+
+                if (newuser.Password != null)
+                {
+                    user.Password = newuser.Password;
+                }
+
+                if (newuser.Username != null)
+                {
+                    user.Username = newuser.Username;
+                }
+
+                if (newuser.LastName != null)
+                {
+                    user.LastName = newuser.LastName;
+                }
+
+                if (newuser.FirstName != null)
+                {
+                    user.FirstName = newuser.FirstName;
+                }
+
+                if (newuser.Birthdate != null)
+                {
+                    user.Birthdate = newuser.Birthdate;
+                }
+
+                if (newuser.Email != null)
+                {
+                    user.Email = newuser.Email;
+                }
+
+                user.LoggedIn = newuser.LoggedIn;
+
                 db.SaveChanges();
 
                 return user.Username + " adatai sikeresen megváltoztatva!";
@@ -67,13 +96,13 @@ namespace HomeManager.Model
             }
         }
 
-        public User GetUser(int id)
+        public User GetUserByUsername(string username)
         {
             try
             {
                 using (HomeManagerEntities db = new HomeManagerEntities())
                 {
-                    User user = db.User.Find(id);
+                    User user = db.User.Where(a => a.Username.Equals(username)).FirstOrDefault();
                     return user;
                 }
             }

@@ -85,8 +85,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Content Include="View\Images\1764.jpg" />
     <Content Include="View\Pages\Account_HomePage.aspx" />
     <Content Include="View\Images\bg.jpg" />
+    <Content Include="View\Pages\ForgottenPassword.aspx" />
     <Content Include="View\Pages\HomePage.aspx" />
     <Content Include="View\Pages\Login.aspx" />
     <Content Include="View\Pages\Register.aspx" />
@@ -139,6 +141,13 @@
     </Compile>
     <Compile Include="View\Pages\Account_HomePage.aspx.designer.cs">
       <DependentUpon>Account_HomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View\Pages\ForgottenPassword.aspx.cs">
+      <DependentUpon>ForgottenPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View\Pages\ForgottenPassword.aspx.designer.cs">
+      <DependentUpon>ForgottenPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="View\Pages\HomePage.aspx.cs">
       <DependentUpon>HomePage.aspx</DependentUpon>

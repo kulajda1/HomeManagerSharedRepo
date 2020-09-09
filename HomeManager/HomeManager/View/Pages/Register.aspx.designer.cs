@@ -42,6 +42,15 @@ namespace HomeManager.View
         protected global::System.Web.UI.WebControls.TextBox txt_username;
 
         /// <summary>
+        /// lbl_username_errortext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_username_errortext;
+
+        /// <summary>
         /// lbl_password control.
         /// </summary>
         /// <remarks>
@@ -58,6 +67,15 @@ namespace HomeManager.View
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_password;
+
+        /// <summary>
+        /// lbl_password_errortext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_password_errortext;
 
         /// <summary>
         /// lbl_passwordagain control.
@@ -78,6 +96,15 @@ namespace HomeManager.View
         protected global::System.Web.UI.WebControls.TextBox txt_passwordagain;
 
         /// <summary>
+        /// lbl_passwordagain_errortext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_passwordagain_errortext;
+
+        /// <summary>
         /// lbl_lastname control.
         /// </summary>
         /// <remarks>
@@ -94,6 +121,15 @@ namespace HomeManager.View
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_lastname;
+
+        /// <summary>
+        /// lbl_lastname_errortext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_lastname_errortext;
 
         /// <summary>
         /// lbl_firstname control.
@@ -114,6 +150,15 @@ namespace HomeManager.View
         protected global::System.Web.UI.WebControls.TextBox txt_firstname;
 
         /// <summary>
+        /// lbl_firstname_errortext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_firstname_errortext;
+
+        /// <summary>
         /// lbl_email control.
         /// </summary>
         /// <remarks>
@@ -132,6 +177,15 @@ namespace HomeManager.View
         protected global::System.Web.UI.WebControls.TextBox txt_email;
 
         /// <summary>
+        /// lbl_email_errortext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_email_errortext;
+
+        /// <summary>
         /// lbl_birthdate control.
         /// </summary>
         /// <remarks>
@@ -148,6 +202,24 @@ namespace HomeManager.View
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txt_birthdate;
+
+        /// <summary>
+        /// lbl_birthdate_errortext control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_birthdate_errortext;
+
+        /// <summary>
+        /// lbl_result control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbl_result;
 
         /// <summary>
         /// btn_register control.

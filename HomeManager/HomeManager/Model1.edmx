@@ -26,6 +26,7 @@
           <Property Name="Image" Type="nchar" MaxLength="150" />
           <Property Name="AreaID" Type="int" Nullable="false" />
           <Property Name="ProductTypeID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
         </EntityType>
         <EntityType Name="ProductType">
           <Key>
@@ -33,6 +34,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Name" Type="nchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -50,10 +52,13 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="IsActive" Type="bit" Nullable="false" />
-          <Property Name="Username" Type="nchar" MaxLength="20" Nullable="false" />
-          <Property Name="Password" Type="nchar" MaxLength="20" Nullable="false" />
-          <Property Name="Name" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
           <Property Name="LoggedIn" Type="bit" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Birthdate" Type="date" />
         </EntityType>
         <Association Name="FK_Product_Area">
           <End Role="Area" Type="Self.Area" Multiplicity="1" />
@@ -114,10 +119,13 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="IsActive" Type="Boolean" Nullable="false" />
-          <Property Name="Username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="LoggedIn" Type="Boolean" Nullable="false" />
+          <Property Name="FirstName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Birthdate" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityContainer Name="HomeManagerEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -149,6 +157,7 @@
           <Property Name="ProductTypeID" Type="Int32" Nullable="false" />
           <NavigationProperty Name="ProductType" Relationship="HomeManagerModel.FK_Product_ProductType" FromRole="Product" ToRole="ProductType" />
           <NavigationProperty Name="Area" Relationship="HomeManagerModel.FK_Product_Area" FromRole="Product" ToRole="Area" />
+          <Property Name="IsActive" Type="Boolean" />
         </EntityType>
         <EntityType Name="ProductType">
           <Key>
@@ -157,6 +166,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
           <NavigationProperty Name="Product" Relationship="HomeManagerModel.FK_Product_ProductType" FromRole="ProductType" ToRole="Product" />
+          <Property Name="IsActive" Type="Boolean" />
         </EntityType>
         <Association Name="FK_Product_ProductType">
           <End Type="HomeManagerModel.ProductType" Role="ProductType" Multiplicity="1" />
@@ -211,11 +221,14 @@
           <EntitySetMapping Name="User">
             <EntityTypeMapping TypeName="HomeManagerModel.User">
               <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="Username" ColumnName="Username" />
                 <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="LoggedIn" ColumnName="LoggedIn" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -223,6 +236,7 @@
           <EntitySetMapping Name="Product">
             <EntityTypeMapping TypeName="HomeManagerModel.Product">
               <MappingFragment StoreEntitySet="Product">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="ProductTypeID" ColumnName="ProductTypeID" />
                 <ScalarProperty Name="AreaID" ColumnName="AreaID" />
                 <ScalarProperty Name="Image" ColumnName="Image" />
@@ -238,6 +252,7 @@
           <EntitySetMapping Name="ProductType">
             <EntityTypeMapping TypeName="HomeManagerModel.ProductType">
               <MappingFragment StoreEntitySet="ProductType">
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>

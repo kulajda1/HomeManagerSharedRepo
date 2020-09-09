@@ -16,10 +16,13 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="IsActive" Type="Boolean" Nullable="false" />
-    <Property Name="Username" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Password" Type="String" MaxLength="20" FixedLength="true" Unicode="true" Nullable="false" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="LoggedIn" Type="Boolean" Nullable="false" />
+    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Birthdate" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityContainer Name="HomeManagerEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
@@ -51,6 +54,7 @@
     <Property Name="ProductTypeID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="ProductType" Relationship="HomeManagerModel.FK_Product_ProductType" FromRole="Product" ToRole="ProductType" />
     <NavigationProperty Name="Area" Relationship="HomeManagerModel.FK_Product_Area" FromRole="Product" ToRole="Area" />
+    <Property Name="IsActive" Type="Boolean" />
   </EntityType>
   <EntityType Name="ProductType">
     <Key>
@@ -59,6 +63,7 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="true" Unicode="true" />
     <NavigationProperty Name="Product" Relationship="HomeManagerModel.FK_Product_ProductType" FromRole="ProductType" ToRole="Product" />
+    <Property Name="IsActive" Type="Boolean" />
   </EntityType>
   <Association Name="FK_Product_ProductType">
     <End Type="HomeManagerModel.ProductType" Role="ProductType" Multiplicity="1" />

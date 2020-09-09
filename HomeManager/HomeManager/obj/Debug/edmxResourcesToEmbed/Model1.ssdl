@@ -21,6 +21,7 @@
     <Property Name="Image" Type="nchar" MaxLength="150" />
     <Property Name="AreaID" Type="int" Nullable="false" />
     <Property Name="ProductTypeID" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
   </EntityType>
   <EntityType Name="ProductType">
     <Key>
@@ -28,6 +29,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Name" Type="nchar" MaxLength="100" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
@@ -45,10 +47,13 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="IsActive" Type="bit" Nullable="false" />
-    <Property Name="Username" Type="nchar" MaxLength="20" Nullable="false" />
-    <Property Name="Password" Type="nchar" MaxLength="20" Nullable="false" />
-    <Property Name="Name" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="20" Nullable="false" />
     <Property Name="LoggedIn" Type="bit" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="Email" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Birthdate" Type="date" />
   </EntityType>
   <Association Name="FK_Product_Area">
     <End Role="Area" Type="Self.Area" Multiplicity="1" />
