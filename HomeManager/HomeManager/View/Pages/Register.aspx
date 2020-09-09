@@ -34,6 +34,7 @@
     <asp:TextBox ID="txt_birthdate" runat="server"></asp:TextBox>
     <br />
     <br />
-    <asp:Button ID="btn_register" runat="server" Text="Regisztráció" PostBackUrl="~/View/Pages/HomePage.aspx" />
+    <asp:Button ID="btn_register" runat="server" Text="Regisztráció" 
+        PostBackUrl="~/View/Pages/HomePage.aspx" OnClick="btn_register_Click" />
 
     </asp:Content>
