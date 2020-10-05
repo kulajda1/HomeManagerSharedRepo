@@ -19,13 +19,24 @@ namespace HomeManager.View
         {
             UserRepo model = new UserRepo();
             User user = model.GetUserByUsername(txt_username.Text);
-            if (user.Password == txt_password.Text)
+            if (user != null)
             {
-                User newuser = new User();
-                newuser.LoggedIn = true;
+                if (user.Password == txt_password.Text)
+                {
+                    User newuser = new User();
+                    newuser.LoggedIn = true;
 
-                model.UpdateUser(user.ID, newuser);
-                Response.Redirect(@"~/View/Pages/HomePage.aspx");
+                    model.UpdateUser(user.ID, newuser);
+                    Response.Redirect(@"~/View/Pages/HomePage.aspx");
+                }
+            }
+            else if (txt_password.Text == "" || txt_username.Text == "")
+            {
+                lbl_login_errortext.Text = "A mezők kitöltése kötelező!";
+            }
+            else
+            {
+                lbl_login_errortext.Text = "A felhasználónév vagy jelszó nem megfelelő!";
             }
         }
     }

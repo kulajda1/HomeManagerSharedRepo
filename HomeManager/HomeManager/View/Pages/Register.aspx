@@ -49,9 +49,13 @@
     <br />
     <asp:Label ID="lbl_result" runat="server" Text=""></asp:Label>
     <br />
-        <div id="registerbutton">
-            <asp:Button CssClass="button button2" ID="btn_register" runat="server" Text="Regisztráció" OnClick="btn_register_Click" style="text-align: center;" />  
+        <div>
+            <div id="registerbutton">
+                <asp:Button CssClass="button button2" ID="btn_register" runat="server" Text="Regisztráció" OnClick="btn_register_Click" style="text-align: center;" />  
+                <br />
+                <asp:Label ID="Label1" runat="server" Text=" vagy "></asp:Label>
+                <asp:HyperLink ID="btn_forgottenpassword" runat="server" CssClass="linkbutton" NavigateUrl="~/View/Pages/Login.aspx">Bejelentkezés</asp:HyperLink>
+            </div>
         </div>
     </div>
-
     </asp:Content>

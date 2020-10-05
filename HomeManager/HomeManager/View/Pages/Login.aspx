@@ -11,13 +11,13 @@
     <br />
     <asp:Label ID="lbl_password" runat="server" Text="Jelszó:"></asp:Label>
     <br />
-    <asp:TextBox ID="txt_password" runat="server"></asp:TextBox>
+    <asp:TextBox ID="txt_password" runat="server" TextMode="Password"></asp:TextBox>
     <br />
     <asp:Label ID="lbl_login_errortext" runat="server" Text="" CssClass="registerErrorMessages"></asp:Label>
+        <br />
     <br />
         <div id="registerbutton">
             <asp:Button CssClass="button button2" ID="btn_login" runat="server" Text="Bejelentkezés" OnClick="btn_register_Click" style="text-align: center;" />  
-            <br />
             <br />
             <asp:HyperLink ID="btn_forgottenpassword" runat="server" CssClass="linkbutton" NavigateUrl="~/View/Pages/ForgottenPassword.aspx">Elfelejtett jelszó?</asp:HyperLink>
         </div>

@@ -5,7 +5,6 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="fb401ef3bc2d401a885f7f6c3173a76d" Name="Diagram1">
-        <EntityTypeShape EntityType="HomeManagerModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeManagerModel.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="HomeManagerModel.Product" Width="1.5" PointX="7.25" PointY="0.75" />
         <EntityTypeShape EntityType="HomeManagerModel.ProductType" Width="1.5" PointX="5" PointY="1.375" />
